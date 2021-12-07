@@ -74,10 +74,20 @@
 
 @media (max-width: 1024px) {
   .home-header {
-    background-image: url("../../../assets/home-background-empty.png");
+    background-image: url("../../../assets/home-background-mobile.png");
+    background-position: 0% 30%;
+    
   }
 
   .home-header > .text-container {
     justify-content: center;
+  }
+}
+
+
+@media (max-width: 403px) {
+  .home-header {
+    background-image: url("../../../assets/home-background-empty.png");
+    
   }
 }
