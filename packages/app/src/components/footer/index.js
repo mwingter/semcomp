@@ -10,7 +10,7 @@ import "./style.css";
 
 const Footer = () => {
   return (
-    <div className="footer-container">
+    <div className="footer-container" id="footer">
       <div className="shiny-divider"></div>
       <footer className="footer-component" role="contentinfo">
         <p>Nos siga nas redes sociais</p>

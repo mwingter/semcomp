@@ -85,30 +85,33 @@ const A11yHeader = () => {
   return (
     <Nav className="a11ybar-content justify-content-end">
       <NavItem class="nav-item">
-        <NavLink  class="nav-link" href="#conteudo" accesskey="1">Conteúdo Principal [Alt + 1]</NavLink>
+        <NavLink  class="nav-link" href="#conteudo" accesskey="1">Conteúdo Principal [1]</NavLink>
       </NavItem>
       <NavItem class="nav-item">
-        <NavLink  class="nav-link" href="#header" accesskey="2">Início do Menu [Alt + 2]</NavLink>
+        <NavLink  class="nav-link" href="#header" accesskey="2">Início do Menu [2]</NavLink>
+      </NavItem>
+      <NavItem class="nav-item">
+        <NavLink  class="nav-link" href="#footer" accesskey="3">Ir para o rodpé [3]</NavLink>
       </NavItem>
       <NavItem class="nav-item">
         <NavLink 
           class="nav-link" 
           href="#high-contrast" 
           id="high-contrast" 
-          accesskey="3" 
+          accesskey="4" 
           onClick={() => { window.toggleContrast() }}
           onKeyDown={() => { window.toggleContrast() }}
-        >Alto contraste [Alt + 3]</NavLink>
+        >Alto contraste [4]</NavLink>
       </NavItem>
       <NavItem class="nav-item">
         <NavLink 
           class="nav-link" 
           href="#fontsize" 
           id="fontsize" 
-          accesskey="4" 
+          accesskey="5" 
           onClick={() => { window.toggleResize() }}
           onKeyDown={() => { window.toggleResize() }}
-        >Aumentar/diminuir texto [Alt + 4]</NavLink>
+        >Aumentar/diminuir texto [5]</NavLink>
       </NavItem>
     </Nav>
   );
