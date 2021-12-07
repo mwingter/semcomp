@@ -113,6 +113,15 @@ const A11yHeader = () => {
           onKeyDown={() => { window.toggleResize() }}
         >Aumentar/diminuir texto [5]</NavLink>
       </NavItem>
+      <NavItem class="nav-item">
+        <NavLink 
+          class="nav-link" 
+          href="#back" 
+          id="back" 
+          accesskey="6" 
+          onClick={() => { window.history.back(); }}
+        >Voltar para a página anterior [6]</NavLink>
+      </NavItem>
     </Nav>
   );
 };
