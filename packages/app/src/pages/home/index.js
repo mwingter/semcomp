@@ -1,10 +1,5 @@
 import React from "react";
 import "./style.css";
-import "./../../components/a11yheader/high-contrast-actions.css";
-import "./../../components/a11yheader/high-contrast-backgrounds.css";
-import "./../../components/a11yheader/high-contrast-forms.css";
-import "./../../components/a11yheader/high-contrast-images.css";
-import "./../../components/a11yheader/high-contrast-texts.css";
 import { useSelector } from "react-redux";
 
 import About from "./about";
@@ -17,8 +12,6 @@ import FAQ from "./faq";
 import LiveNow from "./live-now";
 import Sponsors from "./sponsors";
 // import Stats from "./stats";
-
-//import VLibras from "@djpfs/react-vlibras";
 
 function Home() {
   const user = useSelector((state) => state.auth.user);
@@ -37,7 +30,6 @@ function Home() {
         <Sponsors />
         <FAQ />
         <Footer />
-        {/* <VLibras /> */}
       </div>
     </main>
   );
