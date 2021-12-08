@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, NavItem, NavLink, DropdownItem, DropdownToggle, Dropdown, DropdownMenu, UncontrolledDropdown } from 'reactstrap';
+import { Nav, NavItem, NavLink, DropdownItem, DropdownToggle, DropdownMenu, UncontrolledDropdown } from 'reactstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./high-contrast.css";
@@ -11,8 +11,6 @@ const resizeStrgKey = 'isTextResized'
 const langStrgKey = 'isLanguageEN'
 const cssContrastClass = 'contrast'
 const cssResizeClass = 'larger-text'
-const cssLangClassPT = 'pt-lang'
-const cssLangClassEN = 'en-lang'
 const cssLangClassActive = 'active-lang'
 
 const A11yHeader = () => {
@@ -141,6 +139,7 @@ const A11yHeader = () => {
           <span className="pt-lang">Ir para o rodapé [3]</span>
           <span className="en-lang">Go to footer [3]</span>
         </NavLink>
+      </NavItem>
       <NavItem class="nav-item">
         <NavLink 
           class="nav-link" 
@@ -153,27 +152,14 @@ const A11yHeader = () => {
           <span className="en-lang">Return to previous page [4]</span>
         </NavLink>
       </NavItem>
-      <NavItem class="nav-item">
-        <NavLink 
-          class="nav-link" 
-          href="#lang" 
-          id="lang" 
-          accesskey="7" 
-          onClick={() => { window.toggleLang() }}
-          onKeyDown={() => { window.toggleLang() }}
-        >
-          <span className="pt-lang">Trocar língua (Português/Inglês) [7]</span>
-          <span className="en-lang">Switch language (Portuguese/English) [7]</span>
-        </NavLink>
-      </NavItem>
 
-      <UncontrolledDropdown class="dropdown-a11y">
+      <UncontrolledDropdown>
         <DropdownToggle caret>
           Acessibilidade
         </DropdownToggle>
-        <DropdownMenu class="item-dropdown-a11y">      
-          <DropdownItem >
-            <NavLink 
+        <DropdownMenu>      
+          <DropdownItem>
+            <NavLink
               class="nav-link" 
               href="#high-contrast" 
               id="high-contrast" 
@@ -198,11 +184,24 @@ const A11yHeader = () => {
               <span className="pt-lang">Aumentar/diminuir texto [6]</span>
               <span className="en-lang">Increase/reduce text size [6]</span>
             </NavLink>
-          </DropdownItem>  
+          </DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem>
+            <NavLink 
+              class="nav-link" 
+              href="#lang" 
+              id="lang" 
+              accesskey="7" 
+              onClick={() => { window.toggleLang() }}
+              onKeyDown={() => { window.toggleLang() }}
+            >
+              <span className="pt-lang">Trocar língua (Português/Inglês) [7]</span>
+              <span className="en-lang">Switch language (Portuguese/English) [7]</span>
+          </NavLink>
+          </DropdownItem>
         </DropdownMenu>
       </UncontrolledDropdown>
-    </Nav>
-
+    </Nav>  
   );
 };
 

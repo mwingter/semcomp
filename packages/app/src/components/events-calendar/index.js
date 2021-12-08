@@ -44,7 +44,7 @@ const EventsCalendar = () => {
 
   if (events.length === 0) {
     return <p><span className="pt-lang">Por enquanto não temos nenhum evento divulgado!</span>
-    <span className="en-lang">We currently don't have any events announced!</span></p>;
+    <span className="en-lang">We currently don&apos;t have any events announced!</span></p>;
   }
 
   let splittedEventList = []; // will be a list of lists

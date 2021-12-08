@@ -83,7 +83,7 @@ function Login() {
             Não tem conta? <Link to="/signup">Crie uma agora!</Link>
           </p>
           <p className="en-lang">
-            Don't have an account? <Link to="/signup">Sign up now!</Link>
+            Don&apos;t have an account? <Link to="/signup">Sign up now!</Link>
           </p>
         </form>
         <aside className="pt-lang">
