@@ -125,13 +125,22 @@ const A11yHeader = () => {
   return (
     <Nav className="a11ybar-content justify-content-end">
       <NavItem class="nav-item">
-        <NavLink  class="nav-link" href="#conteudo" accesskey="1">Conteúdo Principal [1]</NavLink>
+        <NavLink  class="nav-link" href="#conteudo" accesskey="1">
+          <span className="pt-lang">Conteúdo Principal [1]</span>
+          <span className="en-lang">Main Content [1]</span>
+        </NavLink>
       </NavItem>
       <NavItem class="nav-item">
-        <NavLink  class="nav-link" href="#header" accesskey="2">Início do Menu [2]</NavLink>
+        <NavLink  class="nav-link" href="#header" accesskey="2">
+          <span className="pt-lang">Início do Menu [2]</span>
+          <span className="en-lang">Menu Start [2]</span>
+        </NavLink>
       </NavItem>
       <NavItem class="nav-item">
-        <NavLink  class="nav-link" href="#footer" accesskey="3">Ir para o rodpé [3]</NavLink>
+        <NavLink  class="nav-link" href="#footer" accesskey="3">
+          <span className="pt-lang">Ir para o rodapé [3]</span>
+          <span className="en-lang">Go to footer [3]</span>
+        </NavLink>
       </NavItem>
       <NavItem class="nav-item">
         <NavLink 
@@ -141,7 +150,10 @@ const A11yHeader = () => {
           accesskey="4" 
           onClick={() => { window.toggleContrast() }}
           onKeyDown={() => { window.toggleContrast() }}
-        >Alto contraste [4]</NavLink>
+        >
+          <span className="pt-lang">Alto contraste [4]</span>
+          <span className="en-lang">High contrast [4]</span>
+        </NavLink>
       </NavItem>
       <NavItem class="nav-item">
         <NavLink 
@@ -151,7 +163,10 @@ const A11yHeader = () => {
           accesskey="5" 
           onClick={() => { window.toggleResize() }}
           onKeyDown={() => { window.toggleResize() }}
-        >Aumentar/diminuir texto [5]</NavLink>
+        >
+          <span className="pt-lang">Aumentar/diminuir texto [5]</span>
+          <span className="en-lang">Increase/reduce text size [5]</span>
+        </NavLink>
       </NavItem>
       <NavItem class="nav-item">
         <NavLink 
@@ -160,7 +175,10 @@ const A11yHeader = () => {
           id="back" 
           accesskey="6" 
           onClick={() => { window.history.back(); }}
-        >Voltar para a página anterior [6]</NavLink>
+        >
+          <span className="pt-lang">Voltar para a página anterior [6]</span>
+          <span className="en-lang">Return to previous page [6]</span>
+        </NavLink>
       </NavItem>
       <NavItem class="nav-item">
         <NavLink 
@@ -170,7 +188,10 @@ const A11yHeader = () => {
           accesskey="7" 
           onClick={() => { window.toggleLang() }}
           onKeyDown={() => { window.toggleLang() }}
-        >Trocar língua (Português/Inglês) [7]</NavLink>
+        >
+          <span className="pt-lang">Trocar língua (Português/Inglês) [7]</span>
+          <span className="en-lang">Switch language (Portuguese/English) [7]</span>
+        </NavLink>
       </NavItem>
     </Nav>
   );
