@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/semcomp-a11y/static/css/main.99d7be5b.chunk.css",
-    "main.js": "/semcomp-a11y/static/js/main.b0cdad89.chunk.js",
-    "main.js.map": "/semcomp-a11y/static/js/main.b0cdad89.chunk.js.map",
+    "main.css": "/semcomp-a11y/static/css/main.58612fda.chunk.css",
+    "main.js": "/semcomp-a11y/static/js/main.36f587ff.chunk.js",
+    "main.js.map": "/semcomp-a11y/static/js/main.36f587ff.chunk.js.map",
     "runtime-main.js": "/semcomp-a11y/static/js/runtime-main.f48963a6.js",
     "runtime-main.js.map": "/semcomp-a11y/static/js/runtime-main.f48963a6.js.map",
     "static/css/2.b9edca59.chunk.css": "/semcomp-a11y/static/css/2.b9edca59.chunk.css",
-    "static/js/2.309d6dc9.chunk.js": "/semcomp-a11y/static/js/2.309d6dc9.chunk.js",
-    "static/js/2.309d6dc9.chunk.js.map": "/semcomp-a11y/static/js/2.309d6dc9.chunk.js.map",
+    "static/js/2.446f237b.chunk.js": "/semcomp-a11y/static/js/2.446f237b.chunk.js",
+    "static/js/2.446f237b.chunk.js.map": "/semcomp-a11y/static/js/2.446f237b.chunk.js.map",
     "index.html": "/semcomp-a11y/index.html",
-    "precache-manifest.da036d1ca01934a36db559c8d3599a66.js": "/semcomp-a11y/precache-manifest.da036d1ca01934a36db559c8d3599a66.js",
+    "precache-manifest.dc0ba11f9a214215c1e2d4e30d58d2d6.js": "/semcomp-a11y/precache-manifest.dc0ba11f9a214215c1e2d4e30d58d2d6.js",
     "service-worker.js": "/semcomp-a11y/service-worker.js",
     "static/css/2.b9edca59.chunk.css.map": "/semcomp-a11y/static/css/2.b9edca59.chunk.css.map",
-    "static/css/main.99d7be5b.chunk.css.map": "/semcomp-a11y/static/css/main.99d7be5b.chunk.css.map",
-    "static/js/2.309d6dc9.chunk.js.LICENSE.txt": "/semcomp-a11y/static/js/2.309d6dc9.chunk.js.LICENSE.txt",
+    "static/css/main.58612fda.chunk.css.map": "/semcomp-a11y/static/css/main.58612fda.chunk.css.map",
+    "static/js/2.446f237b.chunk.js.LICENSE.txt": "/semcomp-a11y/static/js/2.446f237b.chunk.js.LICENSE.txt",
     "static/media/style.css": "/semcomp-a11y/static/media/home-background.684fadba.png",
     "static/media/a_uniao_faz_a_forca.png": "/semcomp-a11y/static/media/a_uniao_faz_a_forca.70c1f283.png",
     "static/media/agamotto.jpg": "/semcomp-a11y/static/media/agamotto.1822a740.jpg",
@@ -100,8 +100,8 @@
   "entrypoints": [
     "static/js/runtime-main.f48963a6.js",
     "static/css/2.b9edca59.chunk.css",
-    "static/js/2.309d6dc9.chunk.js",
-    "static/css/main.99d7be5b.chunk.css",
-    "static/js/main.b0cdad89.chunk.js"
+    "static/js/2.446f237b.chunk.js",
+    "static/css/main.58612fda.chunk.css",
+    "static/js/main.36f587ff.chunk.js"
   ]
 }
