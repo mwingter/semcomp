@@ -85,10 +85,10 @@ const A11yHeader = () => {
   return (
     <Nav className="a11ybar-content justify-content-start">
       <NavItem class="nav-item">
-        <NavLink  class="nav-link" href="#conteudo" accesskey="1">Conteúdo Principal [1]</NavLink>
+        <NavLink  class="nav-link" href="#conteudo" accesskey="1">Conteúdo principal [1]</NavLink>
       </NavItem>
       <NavItem class="nav-item">
-        <NavLink  class="nav-link" href="#header" accesskey="2">Início do Menu [2]</NavLink>
+        <NavLink  class="nav-link" href="#header" accesskey="2">Início do menu [2]</NavLink>
       </NavItem>
       <NavItem class="nav-item">
         <NavLink  class="nav-link" href="#footer" accesskey="3">Rodapé [3]</NavLink>
@@ -96,11 +96,11 @@ const A11yHeader = () => {
       <NavItem class="nav-item">
         <NavLink 
           class="nav-link" 
-          href="#back" 
+          href="" 
           id="back" 
           accesskey="6" 
-          onClick={() => { window.history.back(); }}
-        >Voltar [4]</NavLink>
+          onClick={() => { window.history.back() }}
+        >Voltar para a página anterior [6]</NavLink>
       </NavItem>
 
       <UncontrolledDropdown class="dropdown-a11y">
