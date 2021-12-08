@@ -85,41 +85,39 @@ const A11yHeader = () => {
   return (
     <Nav className="a11ybar-content justify-content-end">
       <NavItem class="nav-item">
-        <NavLink  class="nav-link" href="#conteudo" accesskey="1">Conteúdo Principal [1]</NavLink>
+        <NavLink  class="nav-link" href="#conteudo" accesskey="1">Conteúdo principal [1]</NavLink>
       </NavItem>
       <NavItem class="nav-item">
-        <NavLink  class="nav-link" href="#header" accesskey="2">Início do Menu [2]</NavLink>
+        <NavLink  class="nav-link" href="#header" accesskey="2">Início do menu [2]</NavLink>
       </NavItem>
       <NavItem class="nav-item">
-        <NavLink  class="nav-link" href="#footer" accesskey="3">Ir para o rodpé [3]</NavLink>
+        <NavLink  class="nav-link" href="#footer" accesskey="3">Ir para o rodapé [3]</NavLink>
       </NavItem>
       <NavItem class="nav-item">
         <NavLink 
           class="nav-link" 
-          href="#high-contrast" 
+          href="" 
           id="high-contrast" 
           accesskey="4" 
           onClick={() => { window.toggleContrast() }}
-          onKeyDown={() => { window.toggleContrast() }}
         >Alto contraste [4]</NavLink>
       </NavItem>
       <NavItem class="nav-item">
         <NavLink 
           class="nav-link" 
-          href="#fontsize" 
+          href="" 
           id="fontsize" 
           accesskey="5" 
           onClick={() => { window.toggleResize() }}
-          onKeyDown={() => { window.toggleResize() }}
         >Aumentar/diminuir texto [5]</NavLink>
       </NavItem>
       <NavItem class="nav-item">
         <NavLink 
           class="nav-link" 
-          href="#back" 
+          href="" 
           id="back" 
           accesskey="6" 
-          onClick={() => { window.history.back(); }}
+          onClick={() => { window.history.back() }}
         >Voltar para a página anterior [6]</NavLink>
       </NavItem>
     </Nav>
