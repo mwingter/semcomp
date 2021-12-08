@@ -32,9 +32,13 @@ const Navbar = () => {
             window.open(tShirtsFormLink, "_blank", "noopener noreferrer")
           }
         >
-          Comprar camiseta
+          <span className="pt-lang">Comprar camiseta</span>
+          <span className="en-lang">Buy our T-shirt</span>
         </Navlink>
-        <Navlink href={Routes.home + "#about"}>Sobre nós</Navlink>
+        <Navlink href={Routes.home + "#about"}>
+          <span className="pt-lang">Sobre nós</span>
+          <span className="en-lang">About us</span>
+        </Navlink>
         {/* <Navlink
 					href={Routes.sponsors}
 				>Patrocinadores</Navlink> */}
@@ -52,15 +56,25 @@ const Navbar = () => {
             <Navlink
               href={Routes.hardToClick}
             >Duro de Clicar</Navlink> */}
-            <Navlink href={Routes.profile}>Perfil</Navlink>
+            <Navlink href={Routes.profile}>
+              <span className="pt-lang">Perfil</span>
+              <span className="en-lang">Profile</span>
+            </Navlink>
             <Navlink onClick={logUserOut} href={Routes.home}>
-              Sair
+              <span className="pt-lang">Sair</span>
+              <span className="en-lang">Sign out</span>
             </Navlink>
           </>
         ) : (
           <>
-            <Navlink href={Routes.signup}>Cadastrar</Navlink>
-            <Navlink href={Routes.login}>Entrar</Navlink>
+            <Navlink href={Routes.signup}>
+              <span className="pt-lang">Cadastrar</span>
+              <span className="en-lang">Sign up</span>
+            </Navlink>
+            <Navlink href={Routes.login}>
+              <span className="pt-lang">Entrar</span>
+              <span className="en-lang">Login</span>
+            </Navlink>
           </>
         )}
       </div>

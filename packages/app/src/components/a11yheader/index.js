@@ -8,8 +8,12 @@ import "./style.css";
 
 const contrastStrgKey = 'isAtHighContrast'
 const resizeStrgKey = 'isTextResized'
+const langStrgKey = 'isLanguageEN'
 const cssContrastClass = 'contrast'
 const cssResizeClass = 'larger-text'
+const cssLangClassPT = 'pt-lang'
+const cssLangClassEN = 'en-lang'
+const cssLangClassActive = 'active-lang'
 
 const A11yHeader = () => {
   // NOTE: HC = High Contrast
@@ -82,6 +86,42 @@ const A11yHeader = () => {
     TextResize.updateSiteBody();
   })();
   
+  // Set language (PT-BR or EN)
+  (function() {
+    const SwitchLanguage = {
+      isEN: false,
+      toggle: function () {
+        this.setLang(!this.isEN);
+      },
+      setLang: function (isEN) {
+        localStorage[langStrgKey] = '' + isEN;
+        this.isEN = isEN;
+        this.updateSiteBody();
+      },
+      updateSiteBody: function () {
+        const body = document.body;
+        if (!body) return;
+        
+        this.isEN = this.isEN || localStorage[langStrgKey] === 'true';
+        
+        if (this.isEN) {
+          body.classList.add(cssLangClassActive);
+        }
+        else {
+          body.classList.remove(cssLangClassActive);
+        }
+
+      }
+    }
+
+    window.toggleLang = function () {
+      SwitchLanguage.toggle(); 
+    };
+
+    SwitchLanguage.updateSiteBody();
+
+  })();
+
   return (
     <Nav className="a11ybar-content justify-content-end">
       <NavItem class="nav-item">
@@ -121,6 +161,16 @@ const A11yHeader = () => {
           accesskey="6" 
           onClick={() => { window.history.back(); }}
         >Voltar para a página anterior [6]</NavLink>
+      </NavItem>
+      <NavItem class="nav-item">
+        <NavLink 
+          class="nav-link" 
+          href="#lang" 
+          id="lang" 
+          accesskey="7" 
+          onClick={() => { window.toggleLang() }}
+          onKeyDown={() => { window.toggleLang() }}
+        >Trocar língua (Português/Inglês) [7]</NavLink>
       </NavItem>
     </Nav>
   );

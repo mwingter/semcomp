@@ -75,7 +75,8 @@ function Sponsors() {
     <>
       <div className="shiny-divider"></div>
       <section className="home-sponsors">
-        <h2>Patrocínio</h2>
+        <h2 className="pt-lang">Patrocínio</h2>
+        <h2 className="en-lang">Sponsors</h2>
         <div className="home-sponsors-card">
           <div className="home-sponsors-card-content">
             {companyLogos.map((companyLogo, i) => (
@@ -88,7 +89,8 @@ function Sponsors() {
           </div>
         </div>
         <br />
-        <h2>Apoio</h2>
+        <h2 className="pt-lang">Apoio</h2>
+        <h2 className="en-lang">Support</h2>
         <div className="home-sponsors-card">
           <div className="home-sponsors-card-content">
             {supporterLogos.map((supporterLogo, i) => (
@@ -102,7 +104,8 @@ function Sponsors() {
         </div>
         <br />
         <Link className="home-sponsors-knowmore" to={Routes.sponsors}>
-          Saiba mais
+          <span className="pt-lang">Saiba mais</span>
+          <span className="en-lang">Learn more</span>
         </Link>
       </section>
     </>

@@ -17,3 +17,24 @@
     rgba(141, 61, 153, 1) 100%
   );
 }
+
+.pt-lang {
+  display: inline;
+  transition: display .5s;
+}
+
+.en-lang {
+  display: none;
+  transition: display .5s;
+}
+
+/* Language */
+.active-lang .pt-lang {
+  display: none !important;
+  transition: display .5s;
+}
+
+.active-lang .en-lang {
+  display: inline !important;
+  transition: display .5s;
+}
