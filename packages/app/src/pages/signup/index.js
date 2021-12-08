@@ -165,7 +165,8 @@ function SignupPage() {
       <Header />
       <main className="main-container" role="main" id="conteudo">
         <div className="card">
-          <h1>Cadastrar</h1>
+          <h1 className="pt-lang">Cadastrar</h1>
+          <h1 className="en-lang">Sign up</h1>
           <div className="stepper-container">
             <Stepper
               numberOfSteps={2}
@@ -177,7 +178,7 @@ function SignupPage() {
           {/* Renders the correct form according to the current step */}
           {stepComponent}
         </div>
-        <aside>
+        <aside className="pt-lang">
           Obrigado por se interessar no nosso evento! <br /> <br />A Semcomp é
           100% construída e pensada por alunos da{" "}
           <strong>Universidade de São Paulo, do campus São Carlos</strong>, dos
@@ -198,6 +199,26 @@ function SignupPage() {
           aguardem para mais informações. <br />
           <br />
           Com carinho, Equipe Semcomp!
+        </aside>
+        <aside className="en-lang">
+          Thank you for taking an interest in our event! <br /> <br />Semcomp is
+          100% built and thought out by students of{" "}
+          <strong>University of São Paulo, at São Carlos campus</strong>, of the{" "}
+          <strong>Computer Science and Information Systems</strong> majors. It takes place 
+          every year at
+          <strong>
+            {" "}
+            ICMC - Instituto de Ciências Matemáticas e Computação 
+            (Institute of Mathematical and Computer Sciences)
+          </strong>
+          , a face-to-face event full of lectures, short courses, learning and lots of food.
+          <br />
+          <br />
+          Unfortunately, due to the pandemic, we were unable to hold the event 
+          in person and we are reinventing ourselves with great effort to bring 
+          Semcomp close to you! We hope you all like it and wait for more information. <br />
+          <br />
+          With love, Semcomp team!
         </aside>
       </main>
       <Footer />
