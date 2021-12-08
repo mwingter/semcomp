@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, NavItem, NavLink } from 'reactstrap';
+import { Nav, NavItem, NavLink, DropdownItem, DropdownToggle, Dropdown, DropdownMenu, UncontrolledDropdown } from 'reactstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./high-contrast.css";
@@ -83,7 +83,7 @@ const A11yHeader = () => {
   })();
   
   return (
-    <Nav className="a11ybar-content justify-content-end">
+    <Nav className="a11ybar-content justify-content-start">
       <NavItem class="nav-item">
         <NavLink  class="nav-link" href="#conteudo" accesskey="1">Conteúdo principal [1]</NavLink>
       </NavItem>
@@ -91,36 +91,50 @@ const A11yHeader = () => {
         <NavLink  class="nav-link" href="#header" accesskey="2">Início do menu [2]</NavLink>
       </NavItem>
       <NavItem class="nav-item">
-        <NavLink  class="nav-link" href="#footer" accesskey="3">Ir para o rodapé [3]</NavLink>
-      </NavItem>
-      <NavItem class="nav-item">
-        <NavLink 
-          class="nav-link" 
-          href="" 
-          id="high-contrast" 
-          accesskey="4" 
-          onClick={() => { window.toggleContrast() }}
-        >Alto contraste [4]</NavLink>
-      </NavItem>
-      <NavItem class="nav-item">
-        <NavLink 
-          class="nav-link" 
-          href="" 
-          id="fontsize" 
-          accesskey="5" 
-          onClick={() => { window.toggleResize() }}
-        >Aumentar/diminuir texto [5]</NavLink>
+        <NavLink  class="nav-link" href="#footer" accesskey="3">Rodapé [3]</NavLink>
       </NavItem>
       <NavItem class="nav-item">
         <NavLink 
           class="nav-link" 
           href="" 
           id="back" 
-          accesskey="6" 
+          accesskey="4" 
           onClick={() => { window.history.back() }}
-        >Voltar para a página anterior [6]</NavLink>
+        >Voltar para a página anterior [4]</NavLink>
       </NavItem>
+
+      <UncontrolledDropdown class="dropdown-a11y">
+        <DropdownToggle caret>
+          Acessibilidade
+        </DropdownToggle>
+        <DropdownMenu class="item-dropdown-a11y">      
+          <DropdownItem >
+            <NavLink 
+              class="nav-link" 
+              href="#high-contrast" 
+              id="high-contrast" 
+              accesskey="5" 
+              onClick={() => { window.toggleContrast() }}
+              onKeyDown={() => { window.toggleContrast() }}
+            >Alto contraste [5]
+            </NavLink>
+          </DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem>
+            <NavLink 
+              class="nav-link" 
+              href="#fontsize" 
+              id="fontsize" 
+              accesskey="6" 
+              onClick={() => { window.toggleResize() }}
+              onKeyDown={() => { window.toggleResize() }}
+            >Aumentar/diminuir texto [6]
+            </NavLink>
+          </DropdownItem>  
+        </DropdownMenu>
+      </UncontrolledDropdown>
     </Nav>
+
   );
 };
 
