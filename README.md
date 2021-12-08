@@ -6,4 +6,6 @@ Aqui, você encontrará tanto o código do servidor (back-end) quanto o código 
 - Para a pasta `packages/app` caso queira rodar o site
 - Para a pasta `packages/server` caso queira rodar o servidor
 
+Em ambos os casos, você deverá ler o `README.md` da pasta em que estiver para ter as instruções de como rodar a respectiva aplicação.
+
 Caso você seja da disciplina de Acessibilidade em Sistemas Computacionais, pode ignorar a pasta do servidor. Para averiguar os requisitos de acessibilidade do site pedidos pela disciplina, não é necessário que o servidor esteja rodando.

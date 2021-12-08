@@ -22,3 +22,19 @@
   color: #6D6D6D;
   border-bottom: 3px solid #EA0000;
 }
+
+.dropdown-toggle {
+  background-color: #002940 !important;
+  color: rgb(255, 255, 255) !important;
+  border: none;
+  text-transform: uppercase;
+}
+
+.dropdown-menu {
+  background-color: #002940 !important;
+  
+}
+
+.nav-link {
+  color: rgb(255, 255, 255) !important;
+}

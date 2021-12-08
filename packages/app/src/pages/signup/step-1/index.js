@@ -64,6 +64,21 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
     const discord = discordRef.current.value;
     const disabilities = getDisabilitiesArray(disabilitiesRef.current);
     const canShareData = canShareDataRef.current.checked;
+    
+    const checkboxes = [isStudentRef.current, canShareDataRef.current]
+
+    for (const key in disabilitiesRef.current) {
+      const ref = disabilitiesRef.current[key]
+      checkboxes.push(ref)
+    }
+
+    for (const cb of checkboxes) {
+      if (cb.checked) {
+        cb.setAttribute('aria-checked', true)
+      } else {
+        cb.setAttribute('aria-checked', false)
+      }
+    }
 
     // Updates the `formValue` prop with the newest values given by the user.
     updateFormValue({
@@ -110,12 +125,15 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
           type="text"
           ref={userTelegramRef}
           onChange={handleFormUpdate}
+          placeholder="@usuariodotelegram"
           defaultValue={formValue.userTelegram}
         />
       </label>
       <label className="inline">
         <input
+          role="checkbox"
           type="checkbox"
+          aria-checked="false"
           ref={isStudentRef}
           onChange={handleFormUpdate}
           defaultChecked={needsCourse}
@@ -133,6 +151,7 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
           type="text"
           ref={courseRef}
           onChange={handleFormUpdate}
+          placeholder="Ciências de Computação"
           defaultValue={formValue.course}
           disabled={!needsCourse}
         />
@@ -144,6 +163,7 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
           type="text"
           ref={discordRef}
           onChange={handleFormUpdate}
+          placeholder="Fulano da Silva #9823"
           defaultValue={formValue.discord}
         />
       </label>
@@ -157,7 +177,9 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
         <div className="disabilities-options">
           <label className="inline">
             <input
+              role="checkbox"
               type="checkbox"
+              aria-checked="false"
               ref={(val) => (disabilitiesRef.current["visual"] = val)}
               onChange={handleFormUpdate}
             />
@@ -165,7 +187,9 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
           </label>
           <label className="inline">
             <input
+              role="checkbox"
               type="checkbox"
+              aria-checked="false"
               ref={(val) => (disabilitiesRef.current["motor"] = val)}
               onChange={handleFormUpdate}
             />
@@ -174,7 +198,9 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
           </label>
           <label className="inline">
             <input
+              role="checkbox"
               type="checkbox"
+              aria-checked="false"
               ref={(val) => (disabilitiesRef.current["hearing"] = val)}
               onChange={handleFormUpdate}
             />
@@ -183,7 +209,9 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
           </label>
           <label className="inline">
             <input
+              role="checkbox"
               type="checkbox"
+              aria-checked="false"
               ref={(val) => (disabilitiesRef.current["other"] = val)}
               onChange={handleFormUpdate}
             />
@@ -194,7 +222,9 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
       </div>
       <label className="inline">
         <input
+          role="checkbox"
           type="checkbox"
+          aria-checked="false"
           ref={canShareDataRef}
           onChange={handleFormUpdate}
           defaultChecked={
@@ -212,7 +242,9 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
       </label>
       <label className="inline">
         <input
+          role="checkbox"
           type="checkbox"
+          aria-checked="false"
           onChange={() => setTermsOfUse(!termsOfUse)}
           value={termsOfUse}
         />

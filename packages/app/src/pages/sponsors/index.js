@@ -3,6 +3,8 @@ import React from "react";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import SponsorCard from "./sponsor-card";
+import GoToTop from "../../components/go-to-top";
+import A11yHeader from "../../components/a11yheader";
 
 // import SemcompImage from '../../assets/logo_semcompbeta.jpg';
 import AmdocsLogo from "../../assets/sponsors/svg/amdocs_logo.svg";
@@ -169,6 +171,7 @@ const SuportersInfo = [
 const SponsorsPage = () => {
   return (
     <div className="sponsors-page">
+      <A11yHeader />
       <Header />
 
       {/* This div is here to allow for the aside to be on the right side of the page */}
@@ -216,6 +219,7 @@ const SponsorsPage = () => {
 					</div> */}
         </aside>
       </div>
+      <GoToTop />
       <Footer />
     </div>
   );

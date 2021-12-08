@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, NavItem, NavLink } from 'reactstrap';
+import { Nav, NavItem, NavLink, DropdownItem, DropdownToggle, Dropdown, DropdownMenu, UncontrolledDropdown } from 'reactstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./high-contrast.css";
@@ -123,7 +123,7 @@ const A11yHeader = () => {
   })();
 
   return (
-    <Nav className="a11ybar-content justify-content-end">
+    <Nav className="a11ybar-content justify-content-start">
       <NavItem class="nav-item">
         <NavLink  class="nav-link" href="#conteudo" accesskey="1">
           <span className="pt-lang">Conteúdo Principal [1]</span>
@@ -141,43 +141,16 @@ const A11yHeader = () => {
           <span className="pt-lang">Ir para o rodapé [3]</span>
           <span className="en-lang">Go to footer [3]</span>
         </NavLink>
-      </NavItem>
-      <NavItem class="nav-item">
-        <NavLink 
-          class="nav-link" 
-          href="#high-contrast" 
-          id="high-contrast" 
-          accesskey="4" 
-          onClick={() => { window.toggleContrast() }}
-          onKeyDown={() => { window.toggleContrast() }}
-        >
-          <span className="pt-lang">Alto contraste [4]</span>
-          <span className="en-lang">High contrast [4]</span>
-        </NavLink>
-      </NavItem>
-      <NavItem class="nav-item">
-        <NavLink 
-          class="nav-link" 
-          href="#fontsize" 
-          id="fontsize" 
-          accesskey="5" 
-          onClick={() => { window.toggleResize() }}
-          onKeyDown={() => { window.toggleResize() }}
-        >
-          <span className="pt-lang">Aumentar/diminuir texto [5]</span>
-          <span className="en-lang">Increase/reduce text size [5]</span>
-        </NavLink>
-      </NavItem>
       <NavItem class="nav-item">
         <NavLink 
           class="nav-link" 
           href="#back" 
           id="back" 
-          accesskey="6" 
+          accesskey="4" 
           onClick={() => { window.history.back(); }}
         >
-          <span className="pt-lang">Voltar para a página anterior [6]</span>
-          <span className="en-lang">Return to previous page [6]</span>
+          <span className="pt-lang">Voltar para a página anterior [4]</span>
+          <span className="en-lang">Return to previous page [4]</span>
         </NavLink>
       </NavItem>
       <NavItem class="nav-item">
@@ -193,7 +166,43 @@ const A11yHeader = () => {
           <span className="en-lang">Switch language (Portuguese/English) [7]</span>
         </NavLink>
       </NavItem>
+
+      <UncontrolledDropdown class="dropdown-a11y">
+        <DropdownToggle caret>
+          Acessibilidade
+        </DropdownToggle>
+        <DropdownMenu class="item-dropdown-a11y">      
+          <DropdownItem >
+            <NavLink 
+              class="nav-link" 
+              href="#high-contrast" 
+              id="high-contrast" 
+              accesskey="5" 
+              onClick={() => { window.toggleContrast() }}
+              onKeyDown={() => { window.toggleContrast() }}
+            >
+              <span className="pt-lang">Alto contraste [5]</span>
+              <span className="en-lang">High contrast [5]</span>
+            </NavLink>
+          </DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem>
+            <NavLink 
+              class="nav-link" 
+              href="#fontsize" 
+              id="fontsize" 
+              accesskey="6" 
+              onClick={() => { window.toggleResize() }}
+              onKeyDown={() => { window.toggleResize() }}
+            >
+              <span className="pt-lang">Aumentar/diminuir texto [6]</span>
+              <span className="en-lang">Increase/reduce text size [6]</span>
+            </NavLink>
+          </DropdownItem>  
+        </DropdownMenu>
+      </UncontrolledDropdown>
     </Nav>
+
   );
 };
 
