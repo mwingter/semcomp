@@ -33,7 +33,7 @@ const Navbar = () => {
           }
         >
           <span className="pt-lang">Comprar camiseta</span>
-          <span className="en-lang">Buy our T-shirt</span>
+          <span className="en-lang">Buy T-shirt</span>
         </Navlink>
         <Navlink href={Routes.home + "#about"}>
           <span className="pt-lang">Sobre nós</span>
