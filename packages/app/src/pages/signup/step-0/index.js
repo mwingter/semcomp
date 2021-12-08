@@ -51,6 +51,7 @@ function Step0({ formValue, updateFormValue, onSubmit }) {
           onChange={handleFormUpdate}
           ref={nameRef}
           type="text"
+          placeholder="Fulano Ciclano da Silva"
           // The `defaultValue` prop will make the input start with a given text.
           // If `formValue.name` is empty or undefined, the input will start empty.
           // If it has a value in it (because the user already filled this input,
@@ -66,6 +67,7 @@ function Step0({ formValue, updateFormValue, onSubmit }) {
           onChange={handleFormUpdate}
           ref={emailRef}
           type="text"
+          placeholder="email@dominio.com"
           defaultValue={formValue.email}
         />
       </label>
@@ -75,6 +77,7 @@ function Step0({ formValue, updateFormValue, onSubmit }) {
           onChange={handleFormUpdate}
           ref={passwordRef}
           type="password"
+          placeholder="senhamuitoforte"
           defaultValue={formValue.password}
         />
       </label>
