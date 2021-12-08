@@ -1,4 +1,5 @@
 {
+  "homepage": "http://mwingter.github.io/semcomp-a11y",
   "name": "semcomp-frontend",
   "version": "0.1.0",
   "private": true,
@@ -30,6 +31,8 @@
     "socket.io-client": "^4.0.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "cross-env BROWSER=false EXTEND_ESLINT=false SKIP_PREFLIGHT_CHECK=true react-scripts start",
     "lint": "eslint src",
     "build": "cross-env SKIP_PREFLIGHT_CHECK=true react-scripts build",
@@ -47,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
