@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/semcomp-a11y/static/css/main.58612fda.chunk.css",
-    "main.js": "/semcomp-a11y/static/js/main.36f587ff.chunk.js",
-    "main.js.map": "/semcomp-a11y/static/js/main.36f587ff.chunk.js.map",
+    "main.js": "/semcomp-a11y/static/js/main.966853a3.chunk.js",
+    "main.js.map": "/semcomp-a11y/static/js/main.966853a3.chunk.js.map",
     "runtime-main.js": "/semcomp-a11y/static/js/runtime-main.f48963a6.js",
     "runtime-main.js.map": "/semcomp-a11y/static/js/runtime-main.f48963a6.js.map",
     "static/css/2.b9edca59.chunk.css": "/semcomp-a11y/static/css/2.b9edca59.chunk.css",
     "static/js/2.446f237b.chunk.js": "/semcomp-a11y/static/js/2.446f237b.chunk.js",
     "static/js/2.446f237b.chunk.js.map": "/semcomp-a11y/static/js/2.446f237b.chunk.js.map",
     "index.html": "/semcomp-a11y/index.html",
-    "precache-manifest.dc0ba11f9a214215c1e2d4e30d58d2d6.js": "/semcomp-a11y/precache-manifest.dc0ba11f9a214215c1e2d4e30d58d2d6.js",
+    "precache-manifest.71c7c74dba21e2414c154fccbb6ba352.js": "/semcomp-a11y/precache-manifest.71c7c74dba21e2414c154fccbb6ba352.js",
     "service-worker.js": "/semcomp-a11y/service-worker.js",
     "static/css/2.b9edca59.chunk.css.map": "/semcomp-a11y/static/css/2.b9edca59.chunk.css.map",
     "static/css/main.58612fda.chunk.css.map": "/semcomp-a11y/static/css/main.58612fda.chunk.css.map",
@@ -102,6 +102,6 @@
     "static/css/2.b9edca59.chunk.css",
     "static/js/2.446f237b.chunk.js",
     "static/css/main.58612fda.chunk.css",
-    "static/js/main.36f587ff.chunk.js"
+    "static/js/main.966853a3.chunk.js"
   ]
 }
