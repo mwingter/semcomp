@@ -10,6 +10,8 @@ import LoadingButton from "../../components/loading-button";
 import A11yHeader from "../../components/a11yheader";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
+import GoToTop from "../../components/go-to-top";
+
 
 import "./style.css";
 
@@ -100,6 +102,7 @@ function Login() {
           Com carinho, Equipe Semcomp!
         </aside>
       </main>
+      <GoToTop />
       <Footer />
     </div>
   );

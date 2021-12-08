@@ -11,6 +11,7 @@ import Schedule from "./schedule";
 import FAQ from "./faq";
 import LiveNow from "./live-now";
 import Sponsors from "./sponsors";
+import GoToTop from "../../components/go-to-top";
 // import Stats from "./stats";
 
 function Home() {
@@ -29,6 +30,7 @@ function Home() {
         {/* <AboutBeta /> */}
         <Sponsors />
         <FAQ />
+        <GoToTop />
         <Footer />
       </div>
     </main>

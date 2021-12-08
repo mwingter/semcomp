@@ -11,6 +11,8 @@ import { signup as signupAction } from "../../redux/actions/auth";
 import { Routes } from "../../router";
 import Step0 from "./step-0";
 import Step1 from "./step-1";
+import GoToTop from "../../components/go-to-top";
+
 
 import "./style.css";
 
@@ -200,6 +202,7 @@ function SignupPage() {
           Com carinho, Equipe Semcomp!
         </aside>
       </main>
+      <GoToTop />
       <Footer />
     </div>
   );
