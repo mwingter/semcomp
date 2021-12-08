@@ -98,9 +98,9 @@ const A11yHeader = () => {
           class="nav-link" 
           href="" 
           id="back" 
-          accesskey="6" 
+          accesskey="4" 
           onClick={() => { window.history.back() }}
-        >Voltar para a página anterior [6]</NavLink>
+        >Voltar para a página anterior [4]</NavLink>
       </NavItem>
 
       <UncontrolledDropdown class="dropdown-a11y">
@@ -113,7 +113,7 @@ const A11yHeader = () => {
               class="nav-link" 
               href="#high-contrast" 
               id="high-contrast" 
-              accesskey="4" 
+              accesskey="5" 
               onClick={() => { window.toggleContrast() }}
               onKeyDown={() => { window.toggleContrast() }}
             >Alto contraste [5]
@@ -125,7 +125,7 @@ const A11yHeader = () => {
               class="nav-link" 
               href="#fontsize" 
               id="fontsize" 
-              accesskey="5" 
+              accesskey="6" 
               onClick={() => { window.toggleResize() }}
               onKeyDown={() => { window.toggleResize() }}
             >Aumentar/diminuir texto [6]
