@@ -119,7 +119,8 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
         />
       )}
       <label>
-        <p>Usuário do Telegram (opcional)</p>
+        <p className="pt-lang">Usuário do Telegram (opcional)</p>
+        <p className="en-lang">Telegram Handle (optional)</p>
         <input
           type="text"
           ref={userTelegramRef}
@@ -137,13 +138,15 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
           onChange={handleFormUpdate}
           defaultChecked={needsCourse}
         />
-        <p>Você é estudante da Universidade de São Paulo?</p>
+        <p className="pt-lang">Você é estudante da Universidade de São Paulo?</p>
+        <p className="en-lang">Are you a student at the University of São Paulo?</p>
       </label>
       <label
         className={needsCourse ? "" : "disabled"}
         title={needsCourse ? "" : "Apenas estudantes podem fornecer um curso"}
       >
-        <p>Curso</p>
+        <p className="pt-lang">Curso</p>
+        <p className="en-lang">Major</p>
         <input
           type="text"
           ref={courseRef}
@@ -154,7 +157,8 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
         />
       </label>
       <label>
-        <p>Discord (opcional)</p>
+        <p className="pt-lang">Discord (opcional)</p>
+        <p className="en-lang">Discord (optional)</p>
         <input
           type="text"
           ref={discordRef}
@@ -164,8 +168,11 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
         />
       </label>
       <div>
-        <p>
+        <p className="pt-lang">
           Você é PCD? Se sim, em qual categoria sua deficiência se enquadra?
+        </p>
+        <p className="en-lang">
+          Do you have any disabilities? If so, which category does your disability fall into?
         </p>
         <div className="disabilities-options">
           <label className="inline">
@@ -186,7 +193,8 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
               ref={(val) => (disabilitiesRef.current["motor"] = val)}
               onChange={handleFormUpdate}
             />
-            <p>Motora</p>
+            <p className="pt-lang">Motora</p>
+            <p className="en-lang">Motor</p>
           </label>
           <label className="inline">
             <input
@@ -196,7 +204,8 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
               ref={(val) => (disabilitiesRef.current["hearing"] = val)}
               onChange={handleFormUpdate}
             />
-            <p>Auditiva</p>
+            <p className="pt-lang">Auditiva</p>
+            <p className="en-lang">Hearing</p>
           </label>
           <label className="inline">
             <input
@@ -206,7 +215,8 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
               ref={(val) => (disabilitiesRef.current["other"] = val)}
               onChange={handleFormUpdate}
             />
-            <p>Outra</p>
+            <p className="pt-lang">Outra</p>
+            <p className="en-lang">Other</p>
           </label>
         </div>
       </div>
@@ -224,8 +234,10 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
           }
         />
         <p>
-          Você autoriza a Semcomp a divulgar seus dados para seus parceiros,
-          como empresas patrocinadoras?
+          <span className="pt-lang">Você autoriza a Semcomp a divulgar seus dados para seus parceiros,
+          como empresas patrocinadoras?</span>
+          <span className="en-lang">Do you authorize Semcomp to disclose your data to its partners and 
+          sponsors?</span>
         </p>
       </label>
       <label className="inline">
@@ -236,10 +248,17 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
           onChange={() => setTermsOfUse(!termsOfUse)}
           value={termsOfUse}
         />
-        <p>
+        <p className="pt-lang">
           Ao aceitar, você concorda com a nossa{" "}
           <span tabIndex="0" onClick={() => setIsPrivacyPolicyModalOpen(true)}>
             <u>política de privacidade</u>
+          </span>
+          .
+        </p>
+        <p className="en-lang">
+          By accepting, you agree to our{" "}
+          <span tabIndex="0" onClick={() => setIsPrivacyPolicyModalOpen(true)}>
+            <u>privacy policy.</u>
           </span>
           .
         </p>
@@ -250,7 +269,8 @@ function Step1({ formValue, updateFormValue, onSubmit, isSigningUp }) {
         // Show a cool spinner if a request is already being made
         isLoading={isSigningUp}
       >
-        Finalizar cadastro
+        <span className="pt-lang">Finalizar cadastro</span>
+        <span className="en-lang">Finish registration</span>
       </LoadingButton>
     </form>
   );

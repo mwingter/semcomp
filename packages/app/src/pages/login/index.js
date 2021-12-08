@@ -52,13 +52,15 @@ function Login() {
       <Header />
       <main className="main-container" role="main" id="conteudo">
         <form onSubmit={handleSubmit}>
-          <h1>Entrar</h1>
+          <h1 className="pt-lang">Entrar</h1>
+          <h1 className="en-lang">Login</h1>
           <label>
             <p>E-mail</p>
             <input type="text" name="email" />
           </label>
           <label>
-            <p>Senha</p>
+            <p className="pt-lang">Senha</p>
+            <p className="en-lang">Password</p>
             <input type="password" name="password" />
           </label>
           <LoadingButton
@@ -66,20 +68,25 @@ function Login() {
             isLoading={isLoggingIn}
             type="submit"
           >
-            Entrar
+            <span className="pt-lang">Entrar</span>
+            <span className="en-lang">Login</span>
           </LoadingButton>
           {/* <a className="form-button login-usp" href={BackendURL + '/auth'}>
 						Ou entrar com Login USP
 					</a> */}
           {/* Links are used instead of buttons for SPA navigation */}
           <Link className="form-button forgot-password" to="/reset-password">
-            Esqueci minha senha
+            <span className="pt-lang">Esqueci minha senha</span>
+            <span className="en-lang">I forgot my password</span>
           </Link>
-          <p>
+          <p className="pt-lang">
             Não tem conta? <Link to="/signup">Crie uma agora!</Link>
           </p>
+          <p className="en-lang">
+            Don&apos;t have an account? <Link to="/signup">Sign up now!</Link>
+          </p>
         </form>
-        <aside>
+        <aside className="pt-lang">
           Obrigado por se interessar no nosso evento! <br /> <br />A Semcomp é
           100% construída e pensada por alunos da{" "}
           <strong>Universidade de São Paulo, do campus São Carlos</strong>, dos
@@ -100,6 +107,26 @@ function Login() {
           aguardem para mais informações. <br />
           <br />
           Com carinho, Equipe Semcomp!
+        </aside>
+        <aside className="en-lang">
+          Thank you for taking an interest in our event! <br /> <br />Semcomp is
+          100% built and thought out by students of{" "}
+          <strong>University of São Paulo, at São Carlos campus</strong>, of the{" "}
+          <strong>Computer Science and Information Systems</strong> majors. It takes place 
+          every year at
+          <strong>
+            {" "}
+            ICMC - Instituto de Ciências Matemáticas e Computação 
+            (Institute of Mathematical and Computer Sciences)
+          </strong>
+          , a face-to-face event full of lectures, short courses, learning and lots of food.
+          <br />
+          <br />
+          Unfortunately, due to the pandemic, we were unable to hold the event 
+          in person and we are reinventing ourselves with great effort to bring 
+          Semcomp close to you! We hope you all like it and wait for more information. <br />
+          <br />
+          With love, Semcomp team!
         </aside>
       </main>
       <GoToTop />

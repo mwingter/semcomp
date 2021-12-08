@@ -32,7 +32,8 @@
 
 .dropdown-menu {
   background-color: #002940 !important;
-  
+  font-size: small;
+  padding: 0;
 }
 
 .nav-link {

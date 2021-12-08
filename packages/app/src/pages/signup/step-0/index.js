@@ -46,7 +46,8 @@ function Step0({ formValue, updateFormValue, onSubmit }) {
   return (
     <form className="signup-step-0-container" onSubmit={handleSubmit}>
       <label>
-        <p>Nome</p>
+        <p className="pt-lang">Nome</p>
+        <p className="en-lang">Name</p>
         <input
           onChange={handleFormUpdate}
           ref={nameRef}
@@ -72,7 +73,8 @@ function Step0({ formValue, updateFormValue, onSubmit }) {
         />
       </label>
       <label>
-        <p>Senha</p>
+        <p className="pt-lang">Senha</p>
+        <p className="en-lang">Password</p>
         <input
           onChange={handleFormUpdate}
           ref={passwordRef}
@@ -82,7 +84,8 @@ function Step0({ formValue, updateFormValue, onSubmit }) {
         />
       </label>
       <button type="submit" className="form-button signup">
-        Próximo
+        <span className="pt-lang">Próximo</span>
+        <span className="en-lang">Next</span>
       </button>
       {/* <a
 				href={BackendURL + '/auth'}
@@ -90,7 +93,10 @@ function Step0({ formValue, updateFormValue, onSubmit }) {
 				className="form-button signup-usp"
 			>Ou entrar com Login USP</a> */}
       <Link to="/login">
-        <p>Ja tem uma conta?</p>
+        <p>
+          <span className="pt-lang">Ja tem uma conta?</span>
+          <span className="en-lang">Already have an account?</span>
+        </p>
       </Link>
     </form>
   );

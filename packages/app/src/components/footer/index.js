@@ -13,7 +13,8 @@ const Footer = () => {
     <div className="footer-container" id="footer">
       <div className="shiny-divider"></div>
       <footer className="footer-component" role="contentinfo">
-        <p>Nos siga nas redes sociais</p>
+        <p className="pt-lang">Nos siga nas redes sociais</p>
+        <p className="en-lang">Follow us on social media</p>
         <div>
           {/* Don't forget to add a `rel="noopnener"` to any link that goes outside the
 				Semcomp site. If you want to know why, see this link:
@@ -40,7 +41,8 @@ const Footer = () => {
           </a>
         </div>
         <p className="copyright">
-          © Semcomp 2021. Todos os direitos reservados.
+          <span className="pt-lang">© Semcomp 2021. Todos os direitos reservados.</span>
+          <span className="en-lang">© Semcomp 2021. All rights reserved.</span>
         </p>
       </footer>
     </div>
